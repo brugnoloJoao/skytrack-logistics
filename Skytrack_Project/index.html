@@ -10,54 +10,141 @@
 <body>
 
     <!-- Cabeçalho -->
-    <header>
-        ✈️SkyDrones✈️
+    <header class="header">
+        <h1 id="Titulo">✈️SkyDrones</h1>
+
+        <!-- Menu de navegação -->
+        <nav class="navegar">
+            <ul>
+                <li>
+                    <a href="cadastro.html">Cadastre aqui</a>
+                </li>
+                <li>
+                    <a href="#frotas">Frota de Drones</a>
+                </li>
+                <li>
+                    <a href="#cardAlertas">Card de alertas</a>
+                </li>
+            </ul>
+        </nav>
     </header>
 
-    <!-- Menu de navegação -->
-    <nav>
-        <ul>
-            <li>
-                <a href="#">Text1</a>
-            </li>
-            <li>
-                <a href="#">Text2</a>
-            </li>
-            <li>
-                <a href="#">Text3</a>
-            </li>
-            <li>
-                <a href="#">Text4</a>
-            </li>
-        </ul>
-    </nav>
 
     <!-- Contéudo Principal -->
-    <main>
+    <main class="main">
 
         <!-- Seção sobre o resumo da frota -->
-        <section>
+        <section id="frotas">
             <!-- Tabela -->
-            <table>
+            <table class="tabela_drones">
+                <thead>
+                    <tr>
+                        <th>Drone</th>
+                        <th>ID</th>
+                        <th>Tipo</th>
+                        <th>Status Operacional</th>
+                    </tr>
+                </thead>
 
+                <tbody>
+                    <tr>
+                        <td>Falcon Express</td>
+                        <td>DR-001</td>
+                        <td>Entrega Rápida</td>
+                        <td id="DR-001">Pronto para entrega</td>
+                    </tr>
+
+                    <tr>
+                        <td>SkyCarrier X</td>
+                        <td>DR-002</td>
+                        <td>Carga Pesada</td>
+                        <td id="DR-002">Em operação</td>
+                    </tr>
+
+                    <tr>
+                        <td>UrbanFly Mini</td>
+                        <td>DR-003</td>
+                        <td>Entrega Urbana</td>
+                        <td id="DR-003">Em operação</td>
+                    </tr>
+
+                    <tr>
+                        <td>Night Hawk</td>
+                        <td>DR-004</td>
+                        <td>Entrega Noturna</td>
+                        <td id="DR-004">Em manutenção</td>
+                    </tr>
+
+                    <tr>
+                        <td>EcoWing</td>
+                        <td>DR-005</td>
+                        <td>Sustentável (Baixo Consumo)</td>
+                        <td id="DR-005">Pronto para entrega</td>
+                    </tr>
+
+                    <tr>
+                        <td>MedDelivery Pro</td>
+                        <td>DR-006</td>
+                        <td>Transporte Médico</td>
+                        <td id="DR-006">Em operação</td>
+                    </tr>
+                </tbody>
+
+                <tfoot>
+                    <tr>
+                        <td colspan="4">
+                            Total: 6 | Prontos: 2 | Manutenção: 1 | Bateria baixa: 1 | Atraso: 1 | Prioridade: 1
+                        </td>
+                    </tr>
+                </tfoot>
             </table>
-
         </section>
 
         <!-- Seção para cards de alerta -->
-        <section>
-
+        <section class="cardAlertas id=" cardAlertas">
             <!-- Um Alerta sobre manutenção (usar article para cada alerta) -->
+            <!-- Alerta de manutenção -->
             <article>
-
+                <h3> Manutenção</h3>
+                <p>Drone ID: DR-004 (Night Hawk) em manutenção preventiva.</p>
             </article>
 
+            <!-- Alerta de bateria -->
+            <article>
+                <h3>Bateria Baixa</h3>
+                <p>Drone ID: DR-002 (SkyCarrier X) com bateria abaixo de 20%.</p>
+            </article>
+
+            <article>
+                <h3>Atraso</h3>
+                <p>Drone ID: DR-003 (UrbanFly Mini) sofreu atraso devido ao tráfego aéreo.</p>
+            </article>
+            <!-- Alerta médico -->
+            <article>
+                <h3> Prioridade Alta</h3>
+                <p>Drone ID: DR-006 (MedDelivery Pro) transportando suprimentos médicos urgentes.</p>
+            </article>
         </section>
+
+        <section class="sos">
+            <button id="botao_sos">SOS/AJUDA</button>
+        </section>
+
 
     </main>
 
-    <footer>
-        <p>copyright &copy; 2026 Nome da Empresa. Todos os direitos reservados.</p>
+    <footer class="footer">
+        <p>copyright &copy; 2026 SkyTrack Drones. Todos os direitos reservados.</p>
+
+        <address>
+            Rua Capitão Salomão, 1813<br>
+            Bairro: Campos Elíseos<br>
+            Ribeirão Preto - SP<br>
+            CEP: 14085-430<br><br>
+
+            <a href="mailto:skytrack@suport.com.br">skytrack@suport.com.br</a><br>
+            <a href="tel:+5516999999999">+55 16 9999-9999</a>
+        </address>
     </footer>
 
 </body>
