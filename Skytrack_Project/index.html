@@ -4,27 +4,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>SkyTrack</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-
     <!-- Cabeçalho -->
-    <header class="header">
-        <h1 id="Titulo">✈️SkyDrones</h1>
+    <header>
+        <div class="logo-area">
+            <img id="logo" src="img/logo.png"
+                alt="Drone de seis hélices carregando uma caixa, centralizado num escudo, com os escritos 'SkyDrones logistics'">
+            <h1>SkyDrones</h1>
+        </div>
 
-        <!-- Menu de navegação -->
         <nav class="navegar">
             <ul>
-                <li>
-                    <a href="cadastro.html">Cadastre aqui</a>
-                </li>
-                <li>
-                    <a href="#frotas">Frota de Drones</a>
-                </li>
-                <li>
-                    <a href="#cardAlertas">Card de alertas</a>
-                </li>
+                <li><a href="cadastro.html">Cadastre aqui</a></li>
+                <li><a href="#frotas">Frota de Drones</a></li>
+                <li><a href="#cardAlertas">Card de alertas</a></li>
             </ul>
         </nav>
     </header>
@@ -32,103 +29,110 @@
 
     <!-- Contéudo Principal -->
     <main class="main">
-
+        <h2>Resumo da Frota</h2>
         <!-- Seção sobre o resumo da frota -->
         <section id="frotas">
-            <!-- Tabela -->
-            <table class="tabela_drones">
-                <thead>
-                    <tr>
-                        <th>Drone</th>
-                        <th>ID</th>
-                        <th>Tipo</th>
-                        <th>Status Operacional</th>
-                    </tr>
-                </thead>
+            <div class="acoes-topo">
+                <a href="cadastro.html" class="btn-cadastrar">+ Cadastrar Drone</a>
+            </div>
+            <div class="tabela-container">
+                <!-- Tabela -->
+                <table class="tabela-drones">
+                    <thead>
+                        <tr>
+                            <th>Drone</th>
+                            <th>ID</th>
+                            <th>Tipo</th>
+                            <th>Status Operacional</th>
+                        </tr>
+                    </thead>
 
-                <tbody>
-                    <tr>
-                        <td>Falcon Express</td>
-                        <td>DR-001</td>
-                        <td>Entrega Rápida</td>
-                        <td id="DR-001">Pronto para entrega</td>
-                    </tr>
+                    <tbody>
+                        <tr>
+                            <td>Falcon Express</td>
+                            <td>DR-001</td>
+                            <td>Entrega Rápida</td>
+                            <td id="DR-001" class="status-online">Online</td>
+                        </tr>
 
-                    <tr>
-                        <td>SkyCarrier X</td>
-                        <td>DR-002</td>
-                        <td>Carga Pesada</td>
-                        <td id="DR-002">Em operação</td>
-                    </tr>
+                        <tr>
+                            <td>SkyCarrier X</td>
+                            <td>DR-002</td>
+                            <td>Carga Pesada</td>
+                            <td id="DR-002">Em operação</td>
+                        </tr>
 
-                    <tr>
-                        <td>UrbanFly Mini</td>
-                        <td>DR-003</td>
-                        <td>Entrega Urbana</td>
-                        <td id="DR-003">Em operação</td>
-                    </tr>
+                        <tr>
+                            <td>UrbanFly Mini</td>
+                            <td>DR-003</td>
+                            <td>Entrega Urbana</td>
+                            <td id="DR-003">Em operação</td>
+                        </tr>
 
-                    <tr>
-                        <td>Night Hawk</td>
-                        <td>DR-004</td>
-                        <td>Entrega Noturna</td>
-                        <td id="DR-004">Em manutenção</td>
-                    </tr>
+                        <tr>
+                            <td>Night Hawk</td>
+                            <td>DR-004</td>
+                            <td>Entrega Noturna</td>
+                            <td id="DR-004">Em manutenção</td>
+                        </tr>
 
-                    <tr>
-                        <td>EcoWing</td>
-                        <td>DR-005</td>
-                        <td>Sustentável (Baixo Consumo)</td>
-                        <td id="DR-005">Pronto para entrega</td>
-                    </tr>
+                        <tr>
+                            <td>EcoWing</td>
+                            <td>DR-005</td>
+                            <td>Sustentável (Baixo Consumo)</td>
+                            <td id="DR-005" class="status-online">Online</td>
+                        </tr>
 
-                    <tr>
-                        <td>MedDelivery Pro</td>
-                        <td>DR-006</td>
-                        <td>Transporte Médico</td>
-                        <td id="DR-006">Em operação</td>
-                    </tr>
-                </tbody>
+                        <tr>
+                            <td>MedDelivery Pro</td>
+                            <td>DR-006</td>
+                            <td>Transporte Médico</td>
+                            <td id="DR-006">Em operação</td>
+                        </tr>
+                    </tbody>
 
-                <tfoot>
-                    <tr>
-                        <td colspan="4">
-                            Total: 6 | Prontos: 2 | Manutenção: 1 | Bateria baixa: 1 | Atraso: 1 | Prioridade: 1
-                        </td>
-                    </tr>
-                </tfoot>
-            </table>
+                    <tfoot>
+                        <tr>
+                            <td colspan="4" class="resumo">
+                                Total: 6 | Online: 2 | Manutenção: 1
+                            </td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
         </section>
 
         <!-- Seção para cards de alerta -->
-        <section class="cardAlertas" id="cardAlertas">
+        <h2>Alertas</h2>
+        <section id="cardAlertas">
+
             <!-- Um Alerta sobre manutenção (usar article para cada alerta) -->
             <!-- Alerta de manutenção -->
-            <article>
+            <article class="card">
                 <h3> Manutenção</h3>
                 <p>Drone ID: DR-004 (Night Hawk) em manutenção preventiva.</p>
             </article>
 
             <!-- Alerta de bateria -->
-            <article>
+            <article class="card">
                 <h3>Bateria Baixa</h3>
                 <p>Drone ID: DR-002 (SkyCarrier X) com bateria abaixo de 20%.</p>
             </article>
 
-            <article>
+            <article class="card">
                 <h3>Atraso</h3>
                 <p>Drone ID: DR-003 (UrbanFly Mini) sofreu atraso devido ao tráfego aéreo.</p>
             </article>
             <!-- Alerta médico -->
-            <article>
+            <article class="card">
                 <h3> Prioridade Alta</h3>
                 <p>Drone ID: DR-006 (MedDelivery Pro) transportando suprimentos médicos urgentes.</p>
             </article>
         </section>
 
-        <section class="sos">
-            <button id="botao_sos">SOS/AJUDA</button>
-        </section>
+        <div class="sos">
+            <button id="botao_sos">SOS</button>
+        </div>
 
 
     </main>

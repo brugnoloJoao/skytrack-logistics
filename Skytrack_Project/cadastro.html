@@ -1,42 +1,91 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
     <title>Área de Cadastro</title>
 </head>
+
 <body>
-    <img id="plano-fundo" src="/Skytrack_Project/img/drone-background.webp" alt="Drone voando sobre plantação.">
+    <!-- Cabeçalho -->
     <header>
-        <nav>
-            <img id="logo" src="" alt="Drone de seis hélices carregando uma caixa, centralizado num escudo, com os escritos 'SkyDrones logistics'">
+        <div class="logo-area">
+            <img id="logo" src="img/logo.png"
+                alt="Drone de seis hélices carregando uma caixa, centralizado num escudo, com os escritos 'SkyDrones logistics'">
+            <h1>SkyDrones</h1>
+        </div>
+
+        <nav class="navegar">
             <ul>
-                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html">← Voltar à Página Inicial</a></li>
+                <li><a href="index.html/#frotas">Frota de Drones</a></li>
+                <li><a href="index.html/#cardAlertas">Card de alertas</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <h1>Formulário de Cadastro de Drones</h1>
+        <h2>Formulário de Cadastro de Drones</h2>
         <section class="form">
             <form action="#" method="post">
-                <label for="nomeDrone">Nome do Drone</label> <!--título de uma área do formulário-->
-                <input type="text" placeholder="Digite o nome do drone">
+
+                <label for="nomeDrone">Nome do Drone</label>
+                <input type="text" id="nomeDrone" placeholder="Digite o nome" required>
 
                 <label for="numSerie">Número de Série</label>
-                <input type="text" placeholder="Digite o número de série do drone" minlength="8">
+                <input type="text" id="numSerie" minlength="8" placeholder="Digite o número" required>
 
-                <label for="bateria">Autonomia da Bateria</label>
-                <input type="number" max="120" placeholder="Digite o tempo em minutos. Ex.: 110">
+                <label for="bateria">Autonomia (min)</label>
+                <input type="number" id="bateria" max="120" placeholder="Ex: 100" required>
 
-                
+                <label for="setor">Setor</label>
+                <select id="setor" required>
+                    <option value="">Selecione</option>
+                    <option>Entrega Rápida</option>
+                    <option>Pesada</option>
+                    <option>Inspeção</option>
+                </select>
+
+                <div class="radio-group">
+                    <p>Estado:</p>
+
+                    <label>
+                        <input type="radio" name="estado" value="ativo" required>
+                        Ativo
+                    </label>
+
+                    <label>
+                        <input type="radio" name="estado" value="manutencao">
+                        Em Manutenção
+                    </label>
+                </div>
+
+                <label for="senha">Senha do Operador</label>
+                <input type="password" id="senha" placeholder="Digite sua senha" required>
+
+                <button type="submit" class="btn-enviar">Cadastrar Drone</button>
+                <div class="acoes-topo">
+                    <a href="index.html" class="btn-voltar">← Voltar para o Dashboard</a>
+                </div>
             </form>
         </section>
     </main>
 
-    <footer>
+    <footer class="footer">
+        <p>copyright &copy; 2026 SkyTrack Drones. Todos os direitos reservados.</p>
 
+        <address>
+            Rua Capitão Salomão, 1813<br>
+            Bairro: Campos Elíseos<br>
+            Ribeirão Preto - SP<br>
+            CEP: 14085-430<br><br>
+
+            <a href="mailto:skytrack@suport.com.br">skytrack@suport.com.br</a><br>
+            <a href="tel:+5516999999999">+55 16 9999-9999</a>
+        </address>
     </footer>
 </body>
+
 </html>
