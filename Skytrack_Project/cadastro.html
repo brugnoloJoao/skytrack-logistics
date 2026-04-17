@@ -3,40 +3,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/css/style.css">
     <title>Área de Cadastro</title>
 </head>
 <body>
     <img id="plano-fundo" src="/Skytrack_Project/img/drone-background.webp" alt="Drone voando sobre plantação.">
-    <header>
-        <nav>
-            <img id="logo" src="" alt="Drone de seis hélices carregando uma caixa, centralizado num escudo, com os escritos 'SkyDrones logistics'">
+
+    <!--Cabeçalho-->
+    <header class="header">
+        <h1 id="Titulo">✈️SkyDrones</h1>
+
+        <!-- Menu de navegação -->
+        <nav class="navegar">
             <ul>
-                <li><a href="index.html">Home</a></li>
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+                <li>
+                    <a href="#frotas">Frota de Drones</a>
+                </li>
+                <li>
+                    <a href="#cardAlertas">Card de alertas</a>
+                </li>
             </ul>
         </nav>
     </header>
 
     <main>
+        <!--Formulário-->
         <h1>Formulário de Cadastro de Drones</h1>
         <section class="form">
-            <form action="#" method="post">
+            <form action="index.html" method="post">
                 <label for="nomeDrone">Nome do Drone</label> <!--título de uma área do formulário-->
-                <input type="text" placeholder="Digite o nome do drone">
+                <input type="text" placeholder="Digite o nome do drone" required>
 
                 <label for="numSerie">Número de Série</label>
-                <input type="text" placeholder="Digite o número de série do drone" minlength="8">
+                <input type="text" placeholder="Digite o número de série do drone" minlength="8" required>
 
                 <label for="bateria">Autonomia da Bateria</label>
-                <input type="number" max="120" placeholder="Digite o tempo em minutos. Ex.: 110">
+                <input type="number" max="120" placeholder="Digite o tempo em minutos. Ex.: 110" required>
 
+                <label for="setor">Setor do Drone</label> <br>
+                    <select name="setores">
+                        <option value="" disabled selected>Selecione...</option>
+                        <option value="rapida">Entrega Rápida</option>
+                        <option value="pesada">Entrega Pesada</option>
+                        <option value="inspecao">Inspeção</option>
+                    </select>
                 
+                <label for="status">Status do Drone</label>
+                <input type="radio">Ativo
+                <input type="radio">Em Manutenção
+
+                <label for="password">Senha do Operador</label>
+                <input type="password" required>
+
+                <button type="submit">Registrar Cadastro</button>
             </form>
         </section>
     </main>
 
-    <footer>
+    <!--Rodapé-->
+    <footer class="footer">
+        <p>copyright &copy; 2026 SkyTrack Drones. Todos os direitos reservados.</p>
 
+        <address>
+            Rua Capitão Salomão, 1813<br>
+            Bairro: Campos Elíseos<br>
+            Ribeirão Preto - SP<br>
+            CEP: 14085-430<br><br>
+
+            <a href="mailto:skytrack@suport.com.br">skytrack@suport.com.br</a><br>
+            <a href="tel:+5516999999999">+55 16 9999-9999</a>
+        </address>
     </footer>
 </body>
 </html>
