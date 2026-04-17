@@ -3,9 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <title>Área de Cadastro</title>
 </head>
 <body>
-    
+    <img id="plano-fundo" src="/Skytrack_Project/img/drone-background.webp" alt="Drone voando sobre plantação.">
+    <header>
+        <nav>
+            <img id="logo" src="" alt="Drone de seis hélices carregando uma caixa, centralizado num escudo, com os escritos 'SkyDrones logistics'">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Formulário de Cadastro de Drones</h1>
+        <section class="form">
+            <form action="#" method="post">
+                <label for="nomeDrone">Nome do Drone</label> <!--título de uma área do formulário-->
+                <input type="text" placeholder="Digite o nome do drone">
+
+                <label for="numSerie">Número de Série</label>
+                <input type="text" placeholder="Digite o número de série do drone" minlength="8">
+
+                <label for="bateria">Autonomia da Bateria</label>
+                <input type="number" max="120" placeholder="Digite o tempo em minutos. Ex.: 110">
+
+                
+            </form>
+        </section>
+    </main>
+
+    <footer>
+
+    </footer>
 </body>
 </html>
